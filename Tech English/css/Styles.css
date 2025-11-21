@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+/* ======== Título ======== */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ======== Container dos cards ======== */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px;
+}
+
+/* ======== Cards ======== */
+.card {
+    background: rgba(0, 0, 0, 0.45); /* fundo translúcido */
+    border-radius: 12px;
+    padding: 25px;
+    width: 260px;
+    backdrop-filter: blur(6px);   /* efeito vidro */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+    color: #fff;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover nos cards */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.55);
+}
+
+/* ======== Botão ======== */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0088cc;
+}
