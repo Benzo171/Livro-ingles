@@ -1,70 +1,193 @@
+/* Importa a fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* VARIÁVEL CSS PARA O FUNDO DO BANNER (Fácil de alterar) */
+:root {
+    --banner-bg-color: #007bff; /* Azul vibrante como exemplo */
+    --banner-text-color: #ffffff;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0; /* Removido o margin para o banner ocupar toda a largura */
+    padding-top: 20px; /* Adicionado padding para afastar os cards do banner */
+    display: flex;
+    flex-direction: column; /* Necessário para empilhar o banner e o container */
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* ======== Título ======== */
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 40px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+/* --- ESTILOS DO NOVO BANNER --- */
+
+.book-banner {
+    width: 100%;
+    background-color: var(--banner-bg-color); /* Usa a variável para a cor de fundo */
+    color: var(--banner-text-color);
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ======== Container dos cards ======== */
-.cards-container {
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.summary-area {
+    max-width: 60%;
+}
+
+.book-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.book-author {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.book-summary {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.banner-cta {
+    color: var(--banner-text-color);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.banner-cta:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cover-area {
+    flex-shrink: 0;
+    max-width: 300px; /* Limita a largura da capa */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-cover-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* --- MEDIA QUERY para responsividade do banner --- */
+
+@media (max-width: 900px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .summary-area {
+        max-width: 100%;
+        order: 2; /* Coloca o texto abaixo da capa no mobile */
+    }
+
+    .cover-area {
+        order: 1; /* Coloca a capa acima do texto no mobile */
+        max-width: 200px; 
+        margin-bottom: 20px;
+    }
+
+    .book-title {
+        font-size: 1.8em;
+    }
+}
+
+
+/* --- ESTILOS EXISTENTES PARA OS CARTÕES (Ajustados) --- */
+
+.container {
+    /* Ajustei a margem superior para o banner */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    max-width: 1200px; 
+    width: 100%;
+    margin-bottom: 40px; /* Espaço na parte inferior */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; 
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.card-number {
+    background-color: #e0e0e0; 
+    color: #6a6a6a;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 40px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-right: 15px;
+    flex-shrink: 0;
 }
 
-/* ======== Cards ======== */
-.card {
-    background: rgba(0, 0, 0, 0.45); /* fundo translúcido */
-    border-radius: 12px;
-    padding: 25px;
-    width: 260px;
-    backdrop-filter: blur(6px);   /* efeito vidro */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    text-align: center;
-    color: #fff;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
 }
 
-/* Hover nos cards */
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.55);
+.card-description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; 
 }
 
-/* ======== Botão ======== */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-
-    padding: 12px 20px;
-    border-radius: 8px;
-
-    background-color: #00aaff;
-    color: white;
+.read-more {
+    color: #007bff; 
     text-decoration: none;
-    font-weight: bold;
-
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
 }
 
-.btn:hover {
-    background-color: #0088cc;
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.read-more::after {
+    content: '→'; 
+    margin-left: 8px;
+    font-size: 1.1em;
 }
