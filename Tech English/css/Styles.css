@@ -3,28 +3,35 @@
 
 /* VARIÁVEL CSS PARA O FUNDO DO BANNER (Fácil de alterar) */
 :root {
-    --banner-bg-color: #007bff; /* Azul vibrante como exemplo */
+    --banner-bg-color: #007bff; /* Azul vibrante como fallback de cor */
     --banner-text-color: #ffffff;
+    /* Adicione o caminho da sua imagem aqui. Se vazio, a cor de fundo será usada. */
+    --banner-image-url: url('/assets/teclado.jpg'); 
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f8f8f8;
-    margin: 0; /* Removido o margin para o banner ocupar toda a largura */
-    padding-top: 20px; /* Adicionado padding para afastar os cards do banner */
+    margin: 0; 
+    padding-top: 20px; 
     display: flex;
-    flex-direction: column; /* Necessário para empilhar o banner e o container */
+    flex-direction: column; 
     align-items: center;
     min-height: 100vh;
 }
 
-/* --- ESTILOS DO NOVO BANNER --- */
+/* --- ESTILOS DO NOVO BANNER E FUNDO DE IMAGEM --- */
 
 .book-banner {
     width: 100%;
-    background-color: var(--banner-bg-color); /* Usa a variável para a cor de fundo */
+    /* LOGICA DE FUNDO: Usa a imagem definida, com fallback para a cor */
+    background-image: var(--banner-image-url);
+    background-color: var(--banner-bg-color); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: Efeito paralaxe leve */
     color: var(--banner-text-color);
-    padding: 40px 20px;
+    padding: 80px 20px; /* Aumenta o padding para a imagem aparecer */
     margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -40,6 +47,10 @@ body {
 
 .summary-area {
     max-width: 60%;
+    /* SOBREPOSIÇÃO PARA LEGIBILIDADE: Garante que o texto seja legível sobre a imagem */
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 30px;
+    border-radius: 8px;
 }
 
 .book-title {
@@ -78,7 +89,7 @@ body {
 
 .cover-area {
     flex-shrink: 0;
-    max-width: 300px; /* Limita a largura da capa */
+    max-width: 300px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -99,11 +110,11 @@ body {
 
     .summary-area {
         max-width: 100%;
-        order: 2; /* Coloca o texto abaixo da capa no mobile */
+        order: 2; 
     }
 
     .cover-area {
-        order: 1; /* Coloca a capa acima do texto no mobile */
+        order: 1; 
         max-width: 200px; 
         margin-bottom: 20px;
     }
@@ -117,13 +128,13 @@ body {
 /* --- ESTILOS EXISTENTES PARA OS CARTÕES (Ajustados) --- */
 
 .container {
-    /* Ajustei a margem superior para o banner */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
     max-width: 1200px; 
     width: 100%;
-    margin-bottom: 40px; /* Espaço na parte inferior */
+    margin-bottom: 40px; 
+    padding: 0 20px; /* Adicionado padding para telas pequenas */
 }
 
 .card {
@@ -190,4 +201,23 @@ body {
     content: '→'; 
     margin-left: 8px;
     font-size: 1.1em;
+}
+
+/* --- ESTILOS DO NOVO FOOTER (SOLICITADO) --- */
+.site-footer {
+    background-color: #3498db; /* Fundo azul */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px; /* Adiciona espaço acima do footer */
+    width: 100%; /* Ocupa toda a largura */
+    box-sizing: border-box; 
+    flex-shrink: 0; /* Garante que o footer fique no final da página */
+}
+.site-footer h4 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.student-names p {
+    margin: 5px 0;
 }
