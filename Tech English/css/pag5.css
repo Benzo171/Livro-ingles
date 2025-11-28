@@ -1,4 +1,4 @@
-/* Estilo para a DIV que será o banner azul */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 .content-banner {
     background-color: #3498db; /* Um tom de azul */
     color: white; /* Cor do texto dentro do banner */
@@ -38,7 +38,7 @@
 
 /* Estilos de corpo para centralizar o layout (opcional, dependendo do seu layout geral) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: #f4f4f4;
 }
