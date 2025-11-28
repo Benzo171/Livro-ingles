@@ -6,7 +6,7 @@
     --banner-bg-color: #007bff; /* Azul vibrante como fallback de cor */
     --banner-text-color: #ffffff;
     /* Adicione o caminho da sua imagem aqui. Se vazio, a cor de fundo será usada. */
-    --banner-image-url: url('/assets/teclado.jpg'); 
+    --banner-image-url: url('/Tech English/assets/teclado.jpg'); 
 }
 
 body {
