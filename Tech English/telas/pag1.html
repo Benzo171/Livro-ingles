@@ -1,10 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 1</title>
-    <link rel="stylesheet" href="/Tech English/css/pag1.css">
+    <title>Chapter: The Digital Nervous System</title>
+    
+    <link rel="stylesheet" href="/Tech English/css/pag4.css">
+
+    <style>
+        /* --- ESTILO GERAL DARK TECH --- */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .btn-voltar:hover {
+            color: #93c5fd;
+        }
+
+        .content-banner {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(30, 41, 59, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border: 1px solid #334155;
+        }
+
+        h2 {
+            color: #60a5fa;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .chapter-content > p {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #334155;
+            margin-bottom: 40px;
+        }
+
+        /* --- CARDS DOS TÓPICOS --- */
+        .topic-container {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #475569;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* --- ESTILO PARA AS IMAGENS --- */
+        .image-wrapper {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px; 
+            border-radius: 8px;
+            overflow: hidden; 
+            border: 2px solid #3b82f6; 
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 5px 10px rgba(0,0,0,0.5); 
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block; 
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .image-wrapper img:hover {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        /* --- CAIXA DE RESUMO --- */
+        .summary-text {
+            font-weight: 500;
+            color: #bfdbfe;
+            background-color: rgba(59, 130, 246, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 20px;
+        }
+
+        /* --- CONTEÚDO COMPLETO --- */
+        .full-content {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #cbd5e1;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        /* --- BOTÃO --- */
+        .btn-toggle {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-toggle:hover {
+            background-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (min-width: 768px) {
+            .btn-toggle {
+                width: auto;
+                display: inline-block;
+            }
+        }
+    </style>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -12,7 +163,6 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -24,21 +174,115 @@
 
     <div class="content-banner">
         <div class="chapter-content">
-            <h2>Chapter 1: The Digital Nervous System</h2>
-            <p>
-                Understanding how information flows through organizations at digital speed, enabling rapid decision-making and competitive advantage.
-            </p>
-            <p>
-                1. The importance of the “digital nervous system” — Bill Gates explains that information is the lifeblood of any organization, and companies must use technology to create a fast, integrated, intelligent flow of data, similar to a human nervous system.</p>
-            <p>
-                2. Information as a competitive advantage — Winning companies will be those that collect, organize, and use information efficiently to improve processes, anticipate trends, understand customers, and respond quickly to the market. </p>   
-            <p>
-                3. Historical and practical examples — The chapter highlights Alfred Sloan (General Motors) as a pioneer in using structured information for decision-making, showing that a solid data infrastructure drives innovation and competitive strength.</p>
-            <p>
-                4. Empowering knowledge workers — Technology should make data accessible at all levels of the company, especially to middle managers, enabling faster, more accurate, fact-based decisions instead of bureaucracy or guesswork.</p>
-            <p>
-                5. The role of internal digitalization — Moving from paper to digital systems improves processes, reduces costs, and frees employees for more valuable work; when information flows naturally, companies operate with greater intelligence, agility, and customer focus.</p>
+            <h2>Chapter: The Digital Nervous System</h2>
+            <p>Integrating technology to transform data into rapid action and strategic advantage.</p>
+            <hr>
+
+            <div class="topic-container">
+                <h3>1. The Concept of the Digital Nervous System</h3>
+                
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/gloho5.jpeg" alt="Digital Nervous System Concept">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Just like the human body, a company needs an integrated digital structure to move information instantly and coordinate actions effectively.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content1', this)">Read Full Text</button>
+
+                <div id="content1" class="full-content">
+                    <p>Bill Gates introduces the idea that a company must operate like a digital nervous system—an integrated technological structure that allows information to move rapidly, accurately, and meaningfully. Just as the human nervous system interprets signals and coordinates actions, a business must use digital tools to transform data into insights and decisions.</p>
+                </div>
             </div>
+
+            <div class="topic-container">
+                <h3>2. Information as a Strategic Asset</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/globo4.jpeg" alt="Information Strategy">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Data is useless if isolated. It only becomes a strategic asset when accessible to the right people at the right time to drive action.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content2', this)">Read Full Text</button>
+
+                <div id="content2" class="full-content">
+                    <p>The chapter emphasizes that most organizations gather large amounts of information but fail to use it effectively. Gates argues that information only has real value when it is accessible to the right people at the right time. Turning data into actionable knowledge is what differentiates innovative, competitive businesses from slow, outdated ones.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>3. Breaking Down Organizational Bottlenecks</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/globo3.jpeg" alt="Breaking Bottlenecks">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Traditional paper-heavy processes create delays. Digitizing workflows eliminates these bottlenecks, allowing for faster and better decisions.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content3', this)">Read Full Text</button>
+
+                <div id="content3" class="full-content">
+                    <p>Gates discusses how traditional companies suffer from slow, paper-heavy processes and isolated departments. These bottlenecks impede productivity and decision-making. By digitizing workflows, automating manual tasks, and improving communication, businesses can eliminate delays and make better decisions faster.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>4. Empowering Employees Through Technology</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/globo2.jpeg" alt="Empowered Employees">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Technology shouldn't just monitor; it should empower. Giving employees real-time data allows them to solve customer problems immediately.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content4', this)">Read Full Text</button>
+
+                <div id="content4" class="full-content">
+                    <p>A major point in the chapter is that technology should empower employees at all levels. A digital nervous system gives workers real-time access to relevant information, enabling them to respond more quickly to customers, correct mistakes immediately, and collaborate efficiently. Empowered employees contribute to a more agile and adaptive organization.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>5. Competitiveness in the Digital Age</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/globo1.jpeg" alt="Digital Competitiveness">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Technology is not optional. Deeply connected companies identify market changes faster, ensuring long-term survival and advantage.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content5', this)">Read Full Text</button>
+
+                <div id="content5" class="full-content">
+                    <p>Gates concludes that companies that fail to integrate technology deeply into their operations will fall behind. Digitally connected organizations are more capable of identifying problems early, innovating, and reacting to market changes. The chapter reinforces that technology is not optional—it's a critical foundation for speed, productivity, and long-term competitive advantage.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-    </body>
+
+    <script>
+        function toggleContent(id, btn) {
+            var content = document.getElementById(id);
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                btn.innerText = "Read Full Text";
+            } else {
+                content.style.display = "block";
+                btn.innerText = "Show Less";
+            }
+        }
+    </script>
+</body>
 </html>

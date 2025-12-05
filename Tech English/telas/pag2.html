@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 1</title>
-    <link rel="stylesheet" href="/Tech English/css/pag2.css">
+    <title>Chapter: The Vision of Future Business</title>
+    
+    <link rel="stylesheet" href="/Tech English/css/pag4.css">
+
+    <style>
+        /* --- ESTILO GERAL DARK TECH --- */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .btn-voltar:hover {
+            color: #93c5fd;
+        }
+
+        .content-banner {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(30, 41, 59, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border: 1px solid #334155;
+        }
+
+        h2 {
+            color: #60a5fa;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .chapter-content > p {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #334155;
+            margin-bottom: 40px;
+        }
+
+        /* --- CARDS DOS TÓPICOS --- */
+        .topic-container {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #475569;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* --- NOVO ESTILO PARA AS IMAGENS --- */
+        .image-wrapper {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px; /* Espaço abaixo da imagem */
+            border-radius: 8px;
+            overflow: hidden; /* Garante que a imagem não saia da borda redonda */
+            
+            /* Borda Azul Tech */
+            border: 2px solid #3b82f6; 
+            
+            /* Sombra/Glow */
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 5px 10px rgba(0,0,0,0.5); 
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block; /* Remove espaços brancos indesejados abaixo da img */
+            opacity: 0.9; /* Leve transparência para mesclar com o tema escuro */
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .image-wrapper img:hover {
+            opacity: 1;
+            transform: scale(1.02); /* Leve zoom ao passar o mouse */
+        }
+
+        /* --- CAIXA DE RESUMO --- */
+        .summary-text {
+            font-weight: 500;
+            color: #bfdbfe;
+            background-color: rgba(59, 130, 246, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 20px;
+        }
+
+        /* --- CONTEÚDO COMPLETO --- */
+        .full-content {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #cbd5e1;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        /* --- BOTÃO --- */
+        .btn-toggle {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-toggle:hover {
+            background-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (min-width: 768px) {
+            .btn-toggle {
+                width: auto;
+                display: inline-block;
+            }
+        }
+    </style>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -12,7 +167,6 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -24,36 +178,127 @@
 
     <div class="content-banner">
         <div class="chapter-content">
-            <h2>Chapter 2: Commerce Redefined in the Digital Age</h2>
-            <p>
-                How the internet transforms business-customer relationships, creating friction-free markets and enabling global reach.</p>
-            <p>
-                The Vision of Ubiquitous Digital Change
-                Future technological changes, predicted to be widespread within a decade, will fundamentally alter business:
-                Ubiquitous Computing and Connectivity: Computers and high-speed internet will be common in both the workplace and homes.
-                Digital Everything: Communication (email), information flow (bills, bookings), and equipment (phones, cameras) will all become digital.
-                Portable Data: Versatile digital notebooks will allow users to carry all personal and professional data.
-                Preparation requires implementing a "digital nervous system" to handle three shifts:
-                Digital Self-Service: Most interactions (B2C, B2B) will become digital and automated.
-                High-Value Customer Service: Human involvement will shift to providing high-value, personalized advice.
-                Internal Digitalization: Companies must adopt digital processes internally to remain adaptable.
-                Executives are urged to personally use digital tools to understand this new world.
-                The Rule of Value for Middlemen
-                The Internet creates an efficient market where buyers and sellers connect directly, reducing the need for simple intermediaries.
-                Disintermediation: Simple middlemen (those who only transfer goods or information) are rapidly losing value.
-                The New Mandate: Intermediaries must add value (e.g., highly personalized services) or become high-volume, low-cost providers using self-service technology.
-                Companies like Merrill Lynch exemplify this by investing in technology to empower their core assets (consultants) to provide higher-value advice.
-                Embracing the Web Lifestyle
-                Businesses must use the internet for creative customer interaction, focusing on online experience and service.
-                Explosive Growth: Online sales are growing exponentially.
-                Educated Customers: Companies find that informed customers are better customers, shifting the sales team's role to a consultant.
-                Societal Shift: The "Web lifestyle" is enabling people to turn to the internet for news, entertainment, finance, and community, broadening horizons and strengthening cultural connections.
-                 Speed and Flexible Boundaries
-                Digital information flow changes organizational structure and processes.
-                Focus on Core Skills: Companies should outsource non-core functions to scale efficiently and focus on their core competencies.
-                Virtual Companies: Small and medium businesses can partner digitally to act as large companies.
-                Speed to Market: Digital organization is crucial for dramatically shortening the time it takes to get products and services to customers, a vital necessity for modern competitiveness.
-                The ultimate message is that the Web lifestyle is arriving quickly and permanently, and businesses must act now to adopt digital tools and embrace the change to remain competitive.</div>
+            <h2>Chapter: The Vision of Business in the Digital Age</h2>
+            <p>How ubiquitous connectivity and the web lifestyle are reshaping organizational structures and value chains.</p>
+            <hr>
+
+            <div class="topic-container">
+                <h3>1. The Vision of Ubiquitous Digital Change</h3>
+                
+                <div class="image-wrapper">
+                    <img src="caminho-da-sua-imagem-1.jpg" alt="Ubiquitous Digital Change Illustration">
+                </div>
+
+                <p class="summary-text">
+                    Summary: In the near future, high-speed internet and digital devices will be everywhere. All information and equipment will become digital, and users will carry portable data notebooks.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content1', this)">Read Full Text</button>
+
+                <div id="content1" class="full-content">
+                    <p>Future technological changes, predicted to be widespread within a decade, will fundamentally alter business. This includes:</p>
+                    <p><strong>Ubiquitous Computing and Connectivity:</strong> Computers and high-speed internet will be common in both the workplace and homes.</p>
+                    <p><strong>Digital Everything:</strong> Communication (email), information flow (bills, bookings), and equipment (phones, cameras) will all become digital.</p>
+                    <p><strong>Portable Data:</strong> Versatile digital notebooks will allow users to carry all personal and professional data.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>2. The Digital Nervous System and Required Shifts</h3>
+
+                <div class="image-wrapper">
+                    <img src="caminho-da-sua-imagem-2.jpg" alt="Digital Nervous System Illustration">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Companies must adopt a "digital nervous system." Interactions become self-service, humans focus on high-value advice, and executives must personally use digital tools.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content2', this)">Read Full Text</button>
+
+                <div id="content2" class="full-content">
+                    <p>Preparation for this change requires implementing a "digital nervous system" to handle three key shifts:</p>
+                    <p><strong>Digital Self-Service:</strong> Most interactions (B2C, B2B) will become digital and automated.</p>
+                    <p><strong>High-Value Customer Service:</strong> Human involvement will shift to providing high-value, personalized advice.</p>
+                    <p><strong>Internal Digitalization:</strong> Companies must adopt digital processes internally to remain adaptable. Executives are urged to personally use digital tools to understand this new world.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>3. The Rule of Value for Middlemen</h3>
+
+                <div class="image-wrapper">
+                    <img src="caminho-da-sua-imagem-3.jpg" alt="Value for Middlemen Illustration">
+                </div>
+
+                <p class="summary-text">
+                    Summary: The internet connects buyers and sellers directly. Middlemen must either add significant personalized value or switch to low-cost automation to survive "disintermediation."
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content3', this)">Read Full Text</button>
+
+                <div id="content3" class="full-content">
+                    <p>The Internet creates an efficient market where buyers and sellers connect directly, reducing the need for simple intermediaries.</p>
+                    <p><strong>Disintermediation:</strong> Simple middlemen (those who only transfer goods or information) are rapidly losing value.</p>
+                    <p><strong>The New Mandate:</strong> Intermediaries must add value (e.g., highly personalized services) or become high-volume, low-cost providers using self-service technology. Companies like Merrill Lynch exemplify this by investing in technology to empower their core assets (consultants) to provide higher-value advice.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>4. Embracing the Web Lifestyle</h3>
+
+                <div class="image-wrapper">
+                    <img src="caminho-da-sua-imagem-4.jpg" alt="Web Lifestyle Illustration">
+                </div>
+
+                <p class="summary-text">
+                    Summary: The "Web lifestyle" changes how people get news and shop. Educated customers demand better service, shifting the sales team's role to that of a consultant.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content4', this)">Read Full Text</button>
+
+                <div id="content4" class="full-content">
+                    <p>Businesses must use the internet for creative customer interaction, focusing on online experience and service.</p>
+                    <p><strong>Explosive Growth:</strong> Online sales are growing exponentially.</p>
+                    <p><strong>Educated Customers:</strong> Companies find that informed customers are better customers, shifting the sales team's role to a consultant.</p>
+                    <p><strong>Societal Shift:</strong> The "Web lifestyle" is enabling people to turn to the internet for news, entertainment, finance, and community, broadening horizons and strengthening cultural connections.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>5. Speed and Flexible Boundaries</h3>
+
+                <div class="image-wrapper">
+                    <img src="caminho-da-sua-imagem-5.jpg" alt="Organizational Speed Illustration">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Digital information flow changes organizational structures. Companies should outsource non-core functions to scale efficiently and focus on their core skills.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content5', this)">Read Full Text</button>
+
+                <div id="content5" class="full-content">
+                    <p>Digital information flow changes organizational structure and processes.</p>
+                    <p><strong>Focus on Core Skills:</strong> Companies should outsource non-core functions to scale efficiently and focus on their core competencies.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-    </body>
+
+    <script>
+        function toggleContent(id, btn) {
+            var content = document.getElementById(id);
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                btn.innerText = "Read Full Text";
+            } else {
+                content.style.display = "block";
+                btn.innerText = "Show Less";
+            }
+        }
+    </script>
+</body>
 </html>
