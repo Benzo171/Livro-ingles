@@ -1,68 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-.content-banner {
-    background-color: #3498db; /* Um tom de azul */
-    color: white; /* Cor do texto dentro do banner */
-    padding: 40px 20px; /* Espaçamento interno para o banner */
-    width: 100%; /* Ocupa toda a largura */
-    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
-    text-align: left;
-}
+/* Reset básico e fonte */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            /* MUDANÇA PRINCIPAL: Fundo escuro com um degradê sutil */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0; /* Cor do texto claro */
+            margin: 0;
+            padding: 20px;
+        }
 
-/* Estilo para o conteúdo dentro do banner (para centralizar em telas maiores) */
-.chapter-content {
-    max-width: 800px; /* Limita a largura do texto para melhor leitura */
-    margin: 0 auto; /* Centraliza o bloco de conteúdo */
-    line-height: 1.6;
-}
+        /* Ajuste no banner/container principal */
+        .content-banner {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(30, 41, 59, 0.8); /* Fundo semi-transparente */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #334155; /* Borda sutil */
+        }
 
-.chapter-content h2 {
-    font-size: 2em;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
+        h2 {
+            color: #60a5fa; /* Azul claro para títulos */
+            text-align: center;
+        }
 
-.chapter-content p {
-    margin-bottom: 15px;
-}
+        h3 {
+            color: #93c5fd; /* Azul um pouco mais claro para subtítulos */
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
 
-/* Estilo para o botão de voltar, apenas para garantir que funcione */
-.btn-voltar {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 15px;
-    text-decoration: none;
-    background-color: #f1f1f1;
-    color: #333;
-    border-radius: 5px;
-}
+        hr {
+            border-color: #334155;
+        }
+        
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-/* Estilos de corpo para centralizar o layout (opcional, dependendo do seu layout geral) */
-body {
-    font-family: Arial, sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-}
+        /* Estilos dos Tópicos */
+        .topic-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            /* Fundo ligeiramente mais claro para destacar o card */
+            background-color: #24324a; 
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
 
-.btn-voltar {
-    /* (Mantenha os estilos existentes de layout: display, margem, padding) */
+        /* Estilo do Resumo (Summary) */
+        .summary-text {
+            font-weight: 500;
+            color: #e2e8f0;
+            margin-bottom: 15px;
+            /* Fundo azul escuro para o resumo */
+            background-color: rgba(59, 130, 246, 0.15);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #3b82f6; /* Borda azul brilhante */
+        }
+
+        /* Conteúdo Completo (Escondido) */
+        .full-content {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #1e293b; /* Fundo escuro para o texto completo */
+            color: #cbd5e1; /* Texto um pouco mais cinza */
+            border-radius: 5px;
+            border: 1px solid #334155;
+        }
+
+        /* Estilo do Botão */
+        .btn-toggle {
+            background-color: #3b82f6; /* Azul brilhante */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%; /* Botão ocupa toda a largura no mobile */
+        }
+
+        .btn-toggle:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px); /* Efeito sutil de levantar */
+        }
+        
+        /* Responsividade para telas maiores */
+        @media (min-width: 768px) {
+            .btn-toggle {
+                width: auto; /* Botão tamanho normal em desktop */
+            }
+        }
     
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #f5f0f0; /* Cor do texto (preto/cinza escuro) */
-    border-radius: 5px; /* Bordas arredondadas */
-    
-    /* ESTILO DE FUNDO */
-    background-color: #007bff; /* Cor de fundo cinza claro */
-    
-    /* Adicione uma transição para um efeito suave ao passar o mouse */
-    transition: background-color 0.3s ease;
-}
-
-/* Opcional: Mudar a cor ao passar o mouse (efeito hover) */
-.btn-voltar:hover {
-    background-color: #06264b; /* Fundo ligeiramente mais escuro no hover */
-}
