@@ -1,10 +1,171 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 1</title>
-    <link rel="stylesheet" href="/Tech English/css/pag3.css">
+    <title>Chapter 3: Managing Knowledge</title>
+    
+    <link rel="stylesheet" href="/Tech English/css/pag4.css">
+
+    <style>
+        /* --- ESTILO GERAL DARK TECH --- */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* --- BOTÃO VOLTAR TRANSPARENTE --- */
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 20px;
+            border: 2px solid #60a5fa; 
+            border-radius: 8px; 
+            background-color: transparent;
+            color: #60a5fa; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease; 
+        }
+
+        .btn-voltar:hover {
+            background-color: rgba(96, 165, 250, 0.15);
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.4); 
+            color: #93c5fd; 
+            transform: translateY(-2px); 
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .content-banner {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(30, 41, 59, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border: 1px solid #334155;
+        }
+
+        h2 {
+            color: #60a5fa;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .chapter-content > p {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #334155;
+            margin-bottom: 40px;
+        }
+
+        /* --- CARDS DOS TÓPICOS --- */
+        .topic-container {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #475569;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* --- ESTILO PARA AS IMAGENS --- */
+        .image-wrapper {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #3b82f6; 
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 5px 10px rgba(0,0,0,0.5); 
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .image-wrapper img:hover {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        /* --- CAIXA DE RESUMO --- */
+        .summary-text {
+            font-weight: 500;
+            color: #bfdbfe;
+            background-color: rgba(59, 130, 246, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 20px;
+        }
+
+        /* --- CONTEÚDO COMPLETO --- */
+        .full-content {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #cbd5e1;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        /* --- BOTÃO READ MORE --- */
+        .btn-toggle {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-toggle:hover {
+            background-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (min-width: 768px) {
+            .btn-toggle {
+                width: auto;
+                display: inline-block;
+            }
+        }
+    </style>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -12,7 +173,6 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -25,18 +185,96 @@
     <div class="content-banner">
         <div class="chapter-content">
             <h2>Chapter 3: Managing Knowledge in the Digital Enterprise</h2>
-            <p>
-                Capturing and leveraging organizational intelligence through digital systems, creating lasting competitive advantages.            </p>
-            <p>
-                1. Breaking the "Trapped Data" Mindset: The key hurdle is the belief that information is difficult to access. The chapter advocates that crucial data must be instantly available (often with "three clicks") to the people who need to make decisions.
-            </p>    
-<p>2. Empowering the Knowledge Worker: It's not enough to have the technology; employees, particularly middle managers, must be taught how to analyze real-time data (financial reports, customer feedback, etc.) so they can make better and faster decisions.
-</p>
-<p>3. Creating Institutional Intelligence: The DNS must integrate individual analytical skills into a cohesive collective knowledge. Meetings should be used for debate and decision-making, not for presenting data that could have been reviewed digitally beforehand.
-</p>
-<p>4. The Drive Toward a Paperless Process: The standardization and digitization of all forms, linked to integrated digital workflows, are essential to eliminate slow manual processes, instantly track data, and facilitate innovation. partes que precisam dela, permitindo à empresa reagir na velocidade do pensamento.
-</p>            
+            <p>Capturing and leveraging organizational intelligence through digital systems, creating lasting competitive advantages.</p>
+            <hr>
+
+            <div class="topic-container">
+                <h3>1. Breaking the "Trapped Data" Mindset</h3>
+                
+                <div class="image-wrapper">
+                    <img src="chapter3-img1.jpg" alt="Trapped Data Concept">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Companies must overcome the belief that data is hard to reach. Crucial information should be accessible in "three clicks" for faster decision-making.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content1', this)">Read Full Text</button>
+
+                <div id="content1" class="full-content">
+                    <p>The key hurdle is the belief that information is difficult to access. The chapter advocates that crucial data must be instantly available (often with "three clicks") to the people who need to make decisions.</p>
+                </div>
             </div>
+
+            <div class="topic-container">
+                <h3>2. Empowering the Knowledge Worker</h3>
+
+                <div class="image-wrapper">
+                    <img src="chapter3-img2.jpg" alt="Knowledge Worker">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Technology alone isn't enough; employees (especially middle managers) must be trained to analyze real-time data to improve decisions.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content2', this)">Read Full Text</button>
+
+                <div id="content2" class="full-content">
+                    <p>It's not enough to have the technology; employees, particularly middle managers, must be taught how to analyze real-time data (financial reports, customer feedback, etc.) so they can make better and faster decisions.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>3. Creating Institutional Intelligence</h3>
+
+                <div class="image-wrapper">
+                    <img src="chapter3-img3.jpg" alt="Institutional Intelligence">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Meetings should focus on debate and decisions, not data presentation. Digital systems should integrate individual skills into collective intelligence.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content3', this)">Read Full Text</button>
+
+                <div id="content3" class="full-content">
+                    <p>The DNS must integrate individual analytical skills into a cohesive collective knowledge. Meetings should be used for debate and decision-making, not for presenting data that could have been reviewed digitally beforehand.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>4. The Drive Toward a Paperless Process</h3>
+
+                <div class="image-wrapper">
+                    <img src="chapter3-img4.jpg" alt="Paperless Process">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Digitizing forms and workflows eliminates slow manual processes, allowing instant data tracking and enabling the company to react quickly.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content4', this)">Read Full Text</button>
+
+                <div id="content4" class="full-content">
+                    <p>The standardization and digitization of all forms, linked to integrated digital workflows, are essential to eliminate slow manual processes, instantly track data, and facilitate innovation. This allows information to flow instantly to the parts that need it, allowing the company to react at the speed of thought.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-    </body>
+
+    <script>
+        function toggleContent(id, btn) {
+            var content = document.getElementById(id);
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                btn.innerText = "Read Full Text";
+            } else {
+                content.style.display = "block";
+                btn.innerText = "Show Less";
+            }
+        }
+    </script>
+</body>
 </html>

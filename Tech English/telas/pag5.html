@@ -1,10 +1,171 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 1</title>
-    <link rel="stylesheet" href="/Tech English/css/pag5.css">
+    <title>Chapter 5: Future of Digital Business</title>
+    
+    <link rel="stylesheet" href="/Tech English/css/pag4.css">
+
+    <style>
+        /* --- ESTILO GERAL DARK TECH --- */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* --- BOTÃO VOLTAR TRANSPARENTE --- */
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 20px;
+            border: 2px solid #60a5fa; 
+            border-radius: 8px; 
+            background-color: transparent;
+            color: #60a5fa; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease; 
+        }
+
+        .btn-voltar:hover {
+            background-color: rgba(96, 165, 250, 0.15);
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.4); 
+            color: #93c5fd; 
+            transform: translateY(-2px); 
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .content-banner {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(30, 41, 59, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border: 1px solid #334155;
+        }
+
+        h2 {
+            color: #60a5fa;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .chapter-content > p {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #334155;
+            margin-bottom: 40px;
+        }
+
+        /* --- CARDS DOS TÓPICOS --- */
+        .topic-container {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #475569;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* --- ESTILO PARA AS IMAGENS --- */
+        .image-wrapper {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #3b82f6; 
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 5px 10px rgba(0,0,0,0.5); 
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .image-wrapper img:hover {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        /* --- CAIXA DE RESUMO --- */
+        .summary-text {
+            font-weight: 500;
+            color: #bfdbfe;
+            background-color: rgba(59, 130, 246, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 20px;
+        }
+
+        /* --- CONTEÚDO COMPLETO --- */
+        .full-content {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #cbd5e1;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        /* --- BOTÃO READ MORE --- */
+        .btn-toggle {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-toggle:hover {
+            background-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (min-width: 768px) {
+            .btn-toggle {
+                width: auto;
+                display: inline-block;
+            }
+        }
+    </style>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -12,7 +173,6 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -25,11 +185,96 @@
     <div class="content-banner">
         <div class="chapter-content">
             <h2>Chapter 5: The Future of Digital Business</h2>
-            <p>
-                Exploring emerging trends from AI to IoT, and preparing for continuous adaptation in the digital economy.</p>
-            <p>
-                The text argues that the digital age is transforming business, society, and the way people work. Customers benefit most from technological efficiency, and companies that adopt digital tools faster than their competitors gain a major advantage. Technology should not be used just for innovation’s sake, but to simplify processes, modernize organizations, and enable faster decision-making. Employees need access to real-time information to take responsibility and act creatively, because centralized control can no longer keep up with the speed of modern business. Digital systems should connect all data, processes, partners, and customers, creating a fully integrated “digital nervous system.” The text also highlights that humans have always advanced through tools, and digital tools now expand our mental abilities just as industrial tools expanded physical abilities. By embracing the digital era proactively, society can improve services, reduce costs, encourage citizen participation, and address challenges like privacy and digital inequality. Ultimately, the success of this transformation depends on leaders who empower people, invest in technology, and encourage innovation.</p>
+            <p>Exploring emerging trends from AI to IoT, and preparing for continuous adaptation in the digital economy.</p>
+            <hr>
+
+            <div class="topic-container">
+                <h3>1. The Competitive Advantage of Digital Speed</h3>
+                
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/tigas1.png" alt="Digital Speed">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Digital speed is the new currency. Companies that adopt tools faster gain a major advantage, while customers reap the benefits of efficiency.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content1', this)">Read Full Text</button>
+
+                <div id="content1" class="full-content">
+                    <p>The text argues that the digital age is transforming business, society, and the way people work. Customers benefit most from technological efficiency, and companies that adopt digital tools faster than their competitors gain a major advantage.</p>
+                </div>
             </div>
+
+            <div class="topic-container">
+                <h3>2. Simplifying Processes & Empowering Employees</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/tigas2.png" alt="Empowered Employees">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Innovation must simplify work. Centralized control is obsolete; employees need real-time data to act creatively and make fast decisions.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content2', this)">Read Full Text</button>
+
+                <div id="content2" class="full-content">
+                    <p>Technology should not be used just for innovation’s sake, but to simplify processes, modernize organizations, and enable faster decision-making. Employees need access to real-time information to take responsibility and act creatively, because centralized control can no longer keep up with the speed of modern business.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>3. The Digital Nervous System & Mental Expansion</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/tigas3.png" alt="Digital Nervous System">
+                </div>
+
+                <p class="summary-text">
+                    Summary: A fully integrated "digital nervous system" connects everything. Just as machines expanded physical power, digital tools now expand human mental abilities.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content3', this)">Read Full Text</button>
+
+                <div id="content3" class="full-content">
+                    <p>Digital systems should connect all data, processes, partners, and customers, creating a fully integrated “digital nervous system.” The text also highlights that humans have always advanced through tools, and digital tools now expand our mental abilities just as industrial tools expanded physical abilities.</p>
+                </div>
+            </div>
+
+            <div class="topic-container">
+                <h3>4. Societal Impact & Leadership Responsibility</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/tigas4.png" alt="Societal Impact">
+                </div>
+
+                <p class="summary-text">
+                    Summary: Beyond business, digital transformation improves society and civic participation. Success depends on leaders who address privacy, inequality, and empower their teams.
+                </p>
+
+                <button class="btn-toggle" onclick="toggleContent('content4', this)">Read Full Text</button>
+
+                <div id="content4" class="full-content">
+                    <p>By embracing the digital era proactively, society can improve services, reduce costs, encourage citizen participation, and address challenges like privacy and digital inequality. Ultimately, the success of this transformation depends on leaders who empower people, invest in technology, and encourage innovation.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-    </body>
+
+    <script>
+        function toggleContent(id, btn) {
+            var content = document.getElementById(id);
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                btn.innerText = "Read Full Text";
+            } else {
+                content.style.display = "block";
+                btn.innerText = "Show Less";
+            }
+        }
+    </script>
+</body>
 </html>

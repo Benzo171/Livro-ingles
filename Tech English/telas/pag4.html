@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 4: Digital Transformation</title>
+    <title>Chapter: Transforming Operations</title>
     
     <link rel="stylesheet" href="/Tech English/css/pag4.css">
 
     <style>
-        /* Configuração Geral e Fundo Escuro */
+        /* --- ESTILO GERAL DARK TECH --- */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            /* Fundo degradê escuro (Dark Mode) */
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #e2e8f0; /* Texto claro */
+            color: #e2e8f0;
             margin: 0;
             padding: 20px;
         }
 
-        /* Botão de Voltar */
         .btn-voltar {
             display: inline-block;
             margin-bottom: 20px;
@@ -33,19 +31,18 @@
             color: #93c5fd;
         }
 
-        /* Container Principal */
         .content-banner {
             max-width: 900px;
             margin: 0 auto;
-            background-color: rgba(30, 41, 59, 0.95); /* Fundo semi-transparente escuro */
+            background-color: rgba(30, 41, 59, 0.95);
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6); /* Sombra forte */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             border: 1px solid #334155;
         }
 
         h2 {
-            color: #60a5fa; /* Azul neon suave */
+            color: #60a5fa;
             text-align: center;
             font-size: 2rem;
             margin-bottom: 10px;
@@ -65,11 +62,11 @@
             margin-bottom: 40px;
         }
 
-        /* Cards dos Tópicos */
+        /* --- CARDS DOS TÓPICOS --- */
         .topic-container {
             margin-bottom: 30px;
             padding: 25px;
-            background-color: #1e293b; /* Fundo do card */
+            background-color: #1e293b;
             border-radius: 12px;
             border: 1px solid #475569;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -81,31 +78,56 @@
             border-bottom: 2px solid #3b82f6;
             padding-bottom: 10px;
             display: inline-block;
-        }
-
-        /* Caixa de Resumo */
-        .summary-text {
-            font-weight: 500;
-            color: #bfdbfe; /* Azul bem claro */
-            background-color: rgba(59, 130, 246, 0.1); /* Fundo azul transparente */
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #3b82f6; /* Tarja lateral azul */
             margin-bottom: 20px;
         }
 
-        /* Conteúdo Completo (Escondido) */
+        /* --- ESTILO PARA AS IMAGENS --- */
+        .image-wrapper {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #3b82f6; /* Borda Azul Tech */
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 5px 10px rgba(0,0,0,0.5); /* Sombra Neon */
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .image-wrapper img:hover {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        /* --- CAIXA DE RESUMO --- */
+        .summary-text {
+            font-weight: 500;
+            color: #bfdbfe;
+            background-color: rgba(59, 130, 246, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 20px;
+        }
+
+        /* --- CONTEÚDO COMPLETO --- */
         .full-content {
-            display: none; /* Começa oculto */
+            display: none;
             margin-top: 15px;
             padding: 20px;
-            background-color: #0f172a; /* Mais escuro que o card para contraste */
+            background-color: #0f172a;
             color: #cbd5e1;
             border-radius: 8px;
             border: 1px solid #334155;
         }
 
-        /* Botão Interativo */
+        /* --- BOTÃO --- */
         .btn-toggle {
             background-color: #2563eb;
             color: white;
@@ -127,7 +149,6 @@
             box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
         }
 
-        /* Responsividade para Desktop */
         @media (min-width: 768px) {
             .btn-toggle {
                 width: auto;
@@ -160,6 +181,10 @@
             <div class="topic-container">
                 <h3>1. Healthcare: Transforming the Island into a Digital Continent</h3>
                 
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/eu1.png" alt="Healthcare Digital Transformation">
+                </div>
+
                 <p class="summary-text">
                     Summary: Full data integration (Electronic Records) removes paperwork costs and saves lives by avoiding medical errors and repeated treatments.
                 </p>
@@ -176,6 +201,10 @@
             <div class="topic-container">
                 <h3>2. Government: Taking Government to the People</h3>
 
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/eu2.png" alt="Digital Government Services">
+                </div>
+
                 <p class="summary-text">
                     Summary: Ending bureaucracy and paper. The focus is on creating single online service portals and using Smart Cards for security and fraud reduction.
                 </p>
@@ -191,6 +220,10 @@
 
             <div class="topic-container">
                 <h3>3. Education: Creating Connected Learning Communities</h3>
+
+                <div class="image-wrapper">
+                    <img src="/Tech English/assets/eu3.png" alt="Connected Education">
+                </div>
 
                 <p class="summary-text">
                     Summary: Teaching WITH technology (not just about it). PCs connect teachers and customize learning, improving students' creativity and critical thinking.
